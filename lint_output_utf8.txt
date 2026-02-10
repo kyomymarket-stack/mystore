@@ -1,0 +1,540 @@
+﻿
+> supabase-auth-app@0.0.0 lint
+> eslint .
+
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\client\src\context\AuthContext.tsx
+  53:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\client\src\contexts\AuthContext.tsx
+    9:85  error  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   10:67  error  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   12:56  error  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  100:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\client\src\pages\Analytics.tsx
+   7:40  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  82:56  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\client\src\pages\TicketList.tsx
+  43:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\server\dist\src\auth\auth.controller.d.ts
+   6:16  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  20:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  20:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\server\dist\src\auth\auth.service.d.ts
+  8:56  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  9:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\server\dist\src\auth\jwt.strategy.d.ts
+   3:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   7:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   8:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   9:16  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  10:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\server\prisma\seed.ts
+  11:11  error  'admin' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\server\src\auth\auth.service.ts
+   1:22  error  'UnauthorizedException' is defined but never used  @typescript-eslint/no-unused-vars
+  14:60  error  Unexpected any. Specify a different type           @typescript-eslint/no-explicit-any
+  17:15  error  'password' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  23:21  error  Unexpected any. Specify a different type           @typescript-eslint/no-explicit-any
+  33:54  error  Unexpected any. Specify a different type           @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\server\src\auth\jwt.strategy.ts
+  15:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\server\src\customers\customers.service.ts
+  12:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  32:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\server\src\interactions\interactions.service.ts
+  12:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\server\src\orders\orders.service.ts
+  12:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  32:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\server\src\tickets\tickets.service.ts
+  12:32  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\server\test-prisma.ts
+  10:6  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\AlgeriaAddressForm.tsx
+  33:53  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   @typescript-eslint/no-explicit-any
+  43:17  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\AlgeriaAddressForm.tsx:43:17
+  41 |             if (wilayaObj) {
+  42 |                 const cityList = getCommunesForWilaya(wilayaObj.id);
+> 43 |                 setCommunes(cityList);
+     |                 ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  44 |
+  45 |                 // If current commune is not in the new list, or is empty, set default
+  46 |                 if (!cityList.includes(formData.commune)) {                                                                                                                              react-hooks/set-state-in-effect
+  55:8   warning  React Hook useEffect has a missing dependency: 'formData.commune'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/exhaustive-deps
+  60:13  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\AlgeriaAddressForm.tsx:60:13
+  58 |         // Enforce allowed shipping type
+  59 |         if (allowedShippingTypes.home && !allowedShippingTypes.stop && formData.shippingType !== 'home') {
+> 60 |             setFormData(prev => ({ ...prev, shippingType: 'home' }));
+     |             ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  61 |         } else if (!allowedShippingTypes.home && allowedShippingTypes.stop && formData.shippingType !== 'stop') {
+  62 |             setFormData(prev => ({ ...prev, shippingType: 'stop' }));
+  63 |         }  react-hooks/set-state-in-effect
+  64:8   warning  React Hook useEffect has a missing dependency: 'formData.shippingType'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   react-hooks/exhaustive-deps
+  68:8   warning  React Hook useEffect has a missing dependency: 'onChange'. Either include it or remove the dependency array. If 'onChange' changes too often, find the parent component that defines it and wrap that definition in useCallback                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            react-hooks/exhaustive-deps
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\GoogleSheetsSync.tsx
+    8:11  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   93:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  102:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\LeadForm.tsx
+  244:55  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  439:68  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\PaymentGateway.tsx
+  97:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\analytics\InternalTracker.tsx
+  36:22  error  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\cart\CartLeadForm.tsx
+  210:55  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\layout\Sidebar.tsx
+  101:18  error  'e' is defined but never used             @typescript-eslint/no-unused-vars
+  261:51  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  261:78  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\layout\TopBar.tsx
+   99:102  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  115:31   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\marketing\PixelTracker.tsx
+   8:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   9:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  10:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  11:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  12:26  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\products\AIDesignAssistant.tsx
+   16:23  error  Unexpected any. Specify a different type                   @typescript-eslint/no-explicit-any
+  171:17  error  'newSuggestions' is never reassigned. Use 'const' instead  prefer-const
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\support\SupportChat.tsx
+   51:17  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\support\SupportChat.tsx:51:17
+  49 |
+  50 |         const userMsg: Message = {
+> 51 |             id: Date.now().toString(),
+     |                 ^^^^^^^^^^ Cannot call impure function
+  52 |             text: inputValue,
+  53 |             sender: 'user',
+  54 |             timestamp: new Date()  react-hooks/purity
+  104:22  error  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+  104:25  error  Empty block statement                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         no-empty
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\themes\ShopifyImportModal.tsx
+    8:5   error  'Package' is defined but never used       @typescript-eslint/no-unused-vars
+    9:5   error  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+   10:5   error  'AlertCircle' is defined but never used   @typescript-eslint/no-unused-vars
+   12:5   error  'Download' is defined but never used      @typescript-eslint/no-unused-vars
+   13:5   error  'ShoppingBag' is defined but never used   @typescript-eslint/no-unused-vars
+   14:5   error  'Globe' is defined but never used         @typescript-eslint/no-unused-vars
+   33:22  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   93:26  error  'error' is defined but never used         @typescript-eslint/no-unused-vars
+  101:18  error  'error' is defined but never used         @typescript-eslint/no-unused-vars
+  126:18  error  'error' is defined but never used         @typescript-eslint/no-unused-vars
+  152:18  error  'error' is defined but never used         @typescript-eslint/no-unused-vars
+  219:85  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\themes\ThemeEditor.tsx
+   30:20   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   31:47   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  359:119  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  391:120  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\ui\Input.tsx
+  26:41  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\components\ui\Input.tsx:26:41
+  24 |     const [showPassword, setShowPassword] = useState(false)
+  25 |     const [isFocused, setIsFocused] = useState(false)
+> 26 |     const inputId = id || props.name || Math.random().toString(36).substring(2, 9)
+     |                                         ^^^^^^^^^^^^^ Cannot call impure function
+  27 |
+  28 |     const isPassword = type === 'password'
+  29 |     const inputType = isPassword ? (showPassword ? 'text' : 'password') : type  react-hooks/purity
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\context\AuthContext.tsx
+  122:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\context\CartContext.tsx
+   44:21  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\context\CartContext.tsx:44:21
+  42 |                         typeof item.quantity === 'number'
+  43 |                     );
+> 44 |                     setCartItems(validItems);
+     |                     ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  45 |                 }
+  46 |             } catch (e) {
+  47 |                 console.error("Failed to parse cart", e);  react-hooks/set-state-in-effect
+  135:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     react-refresh/only-export-components
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\context\StoreContext.tsx
+  565:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\context\ThemeContext.tsx
+   7:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+  97:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\context\ToastContext.tsx
+  76:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\hooks\useScrollDirection.ts
+  41:56  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  43:72  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\hooks\useSessionManagement.ts
+  13:49  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\hooks\useSessionManagement.ts:13:49
+  11 | export const useSessionManagement = (session: Session | null, onLogout: (autoSignOut?: boolean) => void) => {
+  12 |     const [showWarning, setShowWarning] = useState(false)
+> 13 |     const lastActivityWriteRef = useRef<number>(Date.now())
+     |                                                 ^^^^^^^^^^ Cannot call impure function
+  14 |
+  15 |     const logout = useCallback(async () => {
+  16 |         // Clear local storage  react-hooks/purity
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\lib\ai-vision.ts
+  134:5  error  'imageUrl' is defined but never used  @typescript-eslint/no-unused-vars
+  135:5  error  'config' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\lib\exportUtils.ts
+  1:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\lib\importUtils.ts
+   1:67  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  11:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  42:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\lib\kanbanService.ts
+  16:20  error  '_type' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\lib\supabase.ts
+  26:8  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\AIVisionBatch.tsx
+  10:24  error  'batchAnalyzeImages' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\AbandonedOrders.tsx
+   34:8   warning  React Hook useEffect has a missing dependency: 'fetchAbandonedOrders'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+   48:21  error    'cutoffDate' is never reassigned. Use 'const' instead                                                                    prefer-const
+   70:75  error    Unexpected any. Specify a different type                                                                                 @typescript-eslint/no-explicit-any
+  177:60  error    Unexpected any. Specify a different type                                                                                 @typescript-eslint/no-explicit-any
+  208:57  error    Unexpected any. Specify a different type                                                                                 @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Analytics.tsx
+  41:52  error    Unexpected any. Specify a different type                                                                           @typescript-eslint/no-explicit-any
+  51:8   warning  React Hook useEffect has a missing dependency: 'fetchAnalytics'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Blacklist.tsx
+   57:18  error  'err' is defined but never used  @typescript-eslint/no-unused-vars
+  133:18  error  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Costs.tsx
+  136:21  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Costs.tsx:136:21
+  134 |         } else {
+  135 |             const expense: Expense = {
+> 136 |                 id: Date.now(),
+      |                     ^^^^^^^^^^ Cannot call impure function
+  137 |                 description: newExpense.description,
+  138 |                 category: newExpense.category,
+  139 |                 amount: amount,  react-hooks/purity
+  537:78  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\CustomerDetails.tsx
+   45:8    warning  React Hook useEffect has a missing dependency: 'fetchCustomer'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+   98:44   error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+  268:111  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Customers.tsx
+   28:9   error  Error: Cannot access variable before it is declared
+
+`fetchCustomers` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Customers.tsx:28:9
+  26 |
+  27 |     useEffect(() => {
+> 28 |         fetchCustomers()
+     |         ^^^^^^^^^^^^^^ `fetchCustomers` accessed before it is declared
+  29 |     }, [])
+  30 |
+  31 |     const fetchCustomers = async () => {
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Customers.tsx:31:5
+  29 |     }, [])
+  30 |
+> 31 |     const fetchCustomers = async () => {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 32 |         setLoading(true)
+     | ^^^^^^^^^^^^^^^^^^^^^^^^
+> 33 |         const { data, error } = await supabase
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^
+> 77 |         setLoading(false)
+     | ^^^^^^^^^^^^^^^^^^^^^^^^
+> 78 |     }
+     | ^^^^^^ `fetchCustomers` is declared here
+  79 |
+  80 |     const filteredCustomers = customers.filter(c =>
+  81 |         ((c.full_name?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||  react-hooks/immutability
+  184:74  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Dashboard.tsx
+   60:52  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-explicit-any
+   63:9   error  Error: Cannot access variable before it is declared
+
+`fetchDashboardData` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Dashboard.tsx:63:9
+  61 |
+  62 |     useEffect(() => {
+> 63 |         fetchDashboardData()
+     |         ^^^^^^^^^^^^^^^^^^ `fetchDashboardData` accessed before it is declared
+  64 |     }, [])
+  65 |
+  66 |     const fetchDashboardData = async () => {
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Dashboard.tsx:66:5
+   64 |     }, [])
+   65 |
+>  66 |     const fetchDashboardData = async () => {
+      |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  67 |         // Fetch orders
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+>  68 |         const { data: orders } = await supabase
+      ΓÇª
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+> 167 |         }
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+> 168 |     }
+      | ^^^^^^ `fetchDashboardData` is declared here
+  169 |
+  170 |     const quickActions = [
+  171 |         { icon: Plus, label: 'Add Product', color: 'from-blue-500 to-blue-600', action: () => navigate('/products') },  react-hooks/immutability
+   90:51  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-explicit-any
+  133:61  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\GoogleSheets.tsx
+  109:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\LandingPage.tsx
+   51:33  error    Error: Cannot access variable before it is declared
+
+`fetchProduct` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\LandingPage.tsx:51:33
+  49 |     // Fetch Product Logic (Same as PublicProduct)
+  50 |     useEffect(() => {
+> 51 |         if (id && !previewData) fetchProduct();
+     |                                 ^^^^^^^^^^^^ `fetchProduct` accessed before it is declared
+  52 |     }, [id, previewData]);
+  53 |
+  54 |     const fetchProduct = async () => {
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\LandingPage.tsx:54:5
+  52 |     }, [id, previewData]);
+  53 |
+> 54 |     const fetchProduct = async () => {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 55 |         setLoading(true);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 56 |         const { data } = await supabase
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 79 |         setLoading(false);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 80 |     };
+     | ^^^^^^^ `fetchProduct` is declared here
+  81 |
+  82 |     // Variant Selection Logic
+  83 |     useEffect(() => {  react-hooks/immutability
+   52:8   warning  React Hook useEffect has a missing dependency: 'fetchProduct'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  react-hooks/exhaustive-deps
+   68:44  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-explicit-any
+  342:78  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\LandingPageCustomizer.tsx
+  23:8   warning  React Hook useEffect has a missing dependency: 'fetchProduct'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  68:56  error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\OnlineStoreCheckoutSettings.tsx
+  25:49  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  41:18  error  'error' is defined but never used         @typescript-eslint/no-unused-vars
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\OnlineStoreContact.tsx
+  40:18  error  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\OnlineStoreHome.tsx
+  25:18  error  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Orders.tsx
+  679:12  error  Parsing error: ')' expected
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\ProductDetails.tsx
+    75:8    warning  React Hook useEffect has a missing dependency: 'fetchProduct'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+   159:25   error    '_id' is assigned a value but never used                                                                         @typescript-eslint/no-unused-vars
+   159:30   error    'created_at' is assigned a value but never used                                                                  @typescript-eslint/no-unused-vars
+   159:42   error    'updated_at' is assigned a value but never used                                                                  @typescript-eslint/no-unused-vars
+   159:54   error    'has_variants' is assigned a value but never used                                                                @typescript-eslint/no-unused-vars
+   159:98   error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+   176:44   error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+   187:27   error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+   200:18   error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+   244:83   error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+   252:85   error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+  1025:115  error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Products.tsx
+   79:27   error  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+   92:18   error  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+  129:83   error  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+  136:85   error  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+  172:44   error  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+  195:30   error  'uploadError' is never reassigned. Use 'const' instead  prefer-const
+  549:105  error  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+  639:62   error  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+  718:80   error  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+  738:79   error  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+  757:74   error  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\PublicProduct.tsx
+   59:34  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-explicit-any
+   59:51  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-explicit-any
+   59:68  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-explicit-any
+  100:17  error    Error: Cannot access variable before it is declared
+
+`fetchProduct` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\PublicProduct.tsx:100:17
+   98 |
+   99 |     useEffect(() => {
+> 100 |         if (id) fetchProduct();
+      |                 ^^^^^^^^^^^^ `fetchProduct` accessed before it is declared
+  101 |     }, [id]);
+  102 |
+  103 |     const fetchProduct = async () => {
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\PublicProduct.tsx:103:5
+  101 |     }, [id]);
+  102 |
+> 103 |     const fetchProduct = async () => {
+      |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 104 |         setLoading(true);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 105 |         const { data, error } = await supabase
+      ΓÇª
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 135 |         setLoading(false);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 136 |     };
+      | ^^^^^^^ `fetchProduct` is declared here
+  137 |
+  138 |     useEffect(() => {
+  139 |         if (product?.variants && Object.keys(selectedOptions).length > 0) {  react-hooks/immutability
+  101:8   warning  React Hook useEffect has a missing dependency: 'fetchProduct'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      react-hooks/exhaustive-deps
+  127:44  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-explicit-any
+  442:22  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Settings.test.tsx
+   71:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  151:20  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Settings.tsx
+   126:8    warning  React Hook useEffect has missing dependencies: 'activeTab' and 'tabs'. Either include them or remove the dependency array. Outer scope values like 'window.location.search' aren't valid dependencies because mutating them doesn't re-render the component  react-hooks/exhaustive-deps
+   305:52   error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+   305:82   error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+   306:50   error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+   306:80   error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+   307:50   error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+   307:74   error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+   308:52   error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+   308:85   error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+   424:59   error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+   432:26   error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+   565:80   error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+   569:80   error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+   677:18   error    'err' is defined but never used                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+   959:111  error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+  4648:134  error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+  4662:63   error    Unexpected any. Specify a different type                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\ShippingRates.tsx
+   58:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   99:93  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  118:18  error  'err' is defined but never used           @typescript-eslint/no-unused-vars
+  127:41  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Shop.tsx
+  110:8   warning  React Hook useEffect has a missing dependency: 'toast'. Either include it or remove the dependency array. You can also do a functional update 'setToast(t => ...)' if you only need 'toast' in the 'setToast' call  react-hooks/exhaustive-deps
+  140:13  error    'result' is never reassigned. Use 'const' instead                                                                                                                                                                   prefer-const
+  254:25  error    Unexpected any. Specify a different type                                                                                                                                                                            @typescript-eslint/no-explicit-any
+  314:74  error    Unexpected any. Specify a different type                                                                                                                                                                            @typescript-eslint/no-explicit-any
+  549:79  error    Unexpected any. Specify a different type                                                                                                                                                                            @typescript-eslint/no-explicit-any
+  550:80  error    Unexpected any. Specify a different type                                                                                                                                                                            @typescript-eslint/no-explicit-any
+  551:97  error    Unexpected any. Specify a different type                                                                                                                                                                            @typescript-eslint/no-explicit-any
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\StockManager.tsx
+   65:8   warning  React Hook useEffect has a missing dependency: 'fetchStock'. Either include it or remove the dependency array      react-hooks/exhaustive-deps
+   69:8   warning  React Hook useEffect has a missing dependency: 'calculateStats'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  173:36  error    Unexpected any. Specify a different type                                                                           @typescript-eslint/no-explicit-any
+  181:65  error    Unexpected any. Specify a different type                                                                           @typescript-eslint/no-explicit-any
+  199:69  error    Unexpected any. Specify a different type                                                                           @typescript-eslint/no-explicit-any
+  442:58  error    '_idx' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+
+C:\Users\SERVER\.gemini\antigravity\New folder (2)\src\pages\Themes.tsx
+  70:40  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Γ£û 196 problems (182 errors, 14 warnings)
+  4 errors and 0 warnings potentially fixable with the `--fix` option.
+
+
